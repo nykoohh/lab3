@@ -178,7 +178,24 @@ Pair * firstMap(HashMap * map)
     return NULL;
 }
 
-Pair * nextMap(HashMap * map) {
+Pair * nextMap(HashMap * map) 
+{
+    long index = map->current+1;
+
+    while (index < map->capacity)
+    {
+        if (map -> buckets[index] != NULL)
+        {
+            if (map -> buckets[index]->key != NULL)
+            {
+                map -> current = index;
+
+                return map -> buckets[index];
+            }
+        }
+        index++;
+    }
+    
 
     return NULL;
 }
