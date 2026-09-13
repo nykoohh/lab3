@@ -210,3 +210,14 @@ Sun Sep 13 11:09:15 PM UTC 2026:
  tests:  8|3
 total_score: 30/60
 05be243
+Sun Sep 13 11:11:37 PM UTC 2026: 
+ hashmap.c | 11 ++++++++++-
+ 1 file changed, 10 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:154:16: error: statement with no effect [-Werror=unused-value]
+  154 |     par -> key == NULL;
+      |                ^
+cc1: all warnings being treated as errors
+6f23952
