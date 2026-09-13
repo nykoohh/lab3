@@ -130,3 +130,26 @@ hashmap.c:60:23: error: ‘mapa’ is a pointer; did you mean to use ‘->’?
       |                       ^
       |                       ->
 a481f68
+Sun Sep 13 05:58:16 PM UTC 2026: 
+ hashmap.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘createMap’:
+hashmap.c:58:5: error: ignoring return value of ‘scanf’ declared with attribute ‘warn_unused_result’ [-Werror=unused-result]
+   58 |     scanf("%ld", &mapa->size);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+hashmap.c:59:5: error: ignoring return value of ‘scanf’ declared with attribute ‘warn_unused_result’ [-Werror=unused-result]
+   59 |     scanf("%ld", &mapa->capacity);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+hashmap.c:60:5: error: ignoring return value of ‘scanf’ declared with attribute ‘warn_unused_result’ [-Werror=unused-result]
+   60 |     scanf("%ld", &mapa->current);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+hashmap.c:56:19: error: ‘mapa’ is used uninitialized [-Werror=uninitialized]
+   56 |     mapa->buckets = NULL;
+      |                   ^
+hashmap.c:54:14: note: ‘mapa’ was declared here
+   54 |     HashMap *mapa;
+      |              ^~~~
+cc1: all warnings being treated as errors
+729b522
