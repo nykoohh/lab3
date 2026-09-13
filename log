@@ -181,3 +181,20 @@ Sun Sep 13 06:25:41 PM UTC 2026:
  tests:  1|6
 total_score: 5/60
 410d8c9
+Sun Sep 13 11:05:08 PM UTC 2026: 
+ hashmap.c | 29 ++++++++++++++++++++++++++++-
+ 1 file changed, 28 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:83:17: error: too few arguments to function ‘is_equal’
+   83 |             if (is_equal(map->buckets[index]->key), key)
+      |                 ^~~~~~~~
+hashmap.c:41:5: note: declared here
+   41 | int is_equal(void* key1, void* key2)
+      |     ^~~~~~~~
+hashmap.c:83:51: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+   83 |             if (is_equal(map->buckets[index]->key), key)
+      |                                                   ^
+cc1: all warnings being treated as errors
+2f5a8c4
