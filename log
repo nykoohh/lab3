@@ -153,3 +153,20 @@ hashmap.c:54:14: note: ‘mapa’ was declared here
       |              ^~~~
 cc1: all warnings being treated as errors
 729b522
+Sun Sep 13 06:22:39 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘createMap’:
+hashmap.c:58:5: error: ignoring return value of ‘scanf’ declared with attribute ‘warn_unused_result’ [-Werror=unused-result]
+   58 |     scanf("%ld", &mapa->size);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+hashmap.c:59:5: error: ignoring return value of ‘scanf’ declared with attribute ‘warn_unused_result’ [-Werror=unused-result]
+   59 |     scanf("%ld", &mapa->capacity);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+hashmap.c:60:5: error: ignoring return value of ‘scanf’ declared with attribute ‘warn_unused_result’ [-Werror=unused-result]
+   60 |     scanf("%ld", &mapa->current);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+e3a08a7
