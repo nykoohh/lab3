@@ -58,3 +58,29 @@ hashmap.c:57:1: error: control reaches end of non-void function [-Werror=return-
       | ^
 cc1: all warnings being treated as errors
 6059476
+Sun Sep 13 05:56:47 PM UTC 2026: 
+ hashmap.c | 6 ++++++
+ 1 file changed, 6 insertions(+)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘createMap’:
+hashmap.c:56:10: error: invalid type argument of ‘->’ (have ‘HashMap’ {aka ‘struct HashMap’})
+   56 |     mapa -> buckets = NULL;
+      |          ^~
+hashmap.c:58:23: error: invalid type argument of ‘->’ (have ‘HashMap’ {aka ‘struct HashMap’})
+   58 |     scanf("%ld", &mapa->size);
+      |                       ^~
+hashmap.c:59:23: error: invalid type argument of ‘->’ (have ‘HashMap’ {aka ‘struct HashMap’})
+   59 |     scanf("%ld", &mapa->capacity);
+      |                       ^~
+hashmap.c:60:23: error: invalid type argument of ‘->’ (have ‘HashMap’ {aka ‘struct HashMap’})
+   60 |     scanf("%ld", &mapa->current);
+      |                       ^~
+hashmap.c:62:12: error: incompatible types when returning type ‘HashMap’ {aka ‘struct HashMap’} but ‘HashMap *’ {aka ‘struct HashMap *’} was expected
+   62 |     return mapa;
+      |            ^~~~
+hashmap.c:63:1: error: control reaches end of non-void function [-Werror=return-type]
+   63 | }
+      | ^
+cc1: all warnings being treated as errors
+fa29291
