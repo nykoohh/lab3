@@ -107,3 +107,26 @@ hashmap.c:63:1: error: control reaches end of non-void function [-Werror=return-
       | ^
 cc1: all warnings being treated as errors
 18ee293
+Sun Sep 13 05:57:36 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘createMap’:
+hashmap.c:56:9: error: ‘mapa’ is a pointer; did you mean to use ‘->’?
+   56 |     mapa.buckets = NULL;
+      |         ^
+      |         ->
+hashmap.c:58:23: error: ‘mapa’ is a pointer; did you mean to use ‘->’?
+   58 |     scanf("%ld", &mapa.size);
+      |                       ^
+      |                       ->
+hashmap.c:59:23: error: ‘mapa’ is a pointer; did you mean to use ‘->’?
+   59 |     scanf("%ld", &mapa.capacity);
+      |                       ^
+      |                       ->
+hashmap.c:60:23: error: ‘mapa’ is a pointer; did you mean to use ‘->’?
+   60 |     scanf("%ld", &mapa.current);
+      |                       ^
+      |                       ->
+a481f68
