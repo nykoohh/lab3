@@ -226,6 +226,7 @@ void enlarge(HashMap * map)
     {
         map -> buckets[i] = NULL;  
     }
+    map -> size = 0;
 
 }
 
