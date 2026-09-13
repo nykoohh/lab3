@@ -27,3 +27,20 @@ hashmap.c:57:1: error: control reaches end of non-void function [-Werror=return-
       | ^
 cc1: all warnings being treated as errors
 362153e
+Sun Sep 13 05:52:23 PM UTC 2026: 
+Compilation failed
+In file included from /nix/store/41pf3md9zgpda9kwh6rzn5kaddf7i0lp-glibc-2.40-66-dev/include/time.h:29,
+                 from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:54:20: error: invalid initializer
+   54 |     HashMap mapa = NULL;
+      |                    ^~~~
+In file included from test.c:5:
+hashmap.c:56:12: error: incompatible types when returning type ‘HashMap’ {aka ‘struct HashMap’} but ‘HashMap *’ {aka ‘struct HashMap *’} was expected
+   56 |     return mapa;
+      |            ^~~~
+hashmap.c:57:1: error: control reaches end of non-void function [-Werror=return-type]
+   57 | }
+      | ^
+cc1: all warnings being treated as errors
+90c3540
