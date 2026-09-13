@@ -80,7 +80,7 @@ void insertMap(HashMap * map, char * key, void * value)
     {
         if (map -> buckets[index] -> key != NULL)
         {
-            if (is_equal(map->buckets[index]->key), key)
+            if (is_equal(map->buckets[index]->key, key))
             {
                 return;
             }
