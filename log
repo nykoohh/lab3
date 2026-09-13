@@ -84,3 +84,26 @@ hashmap.c:63:1: error: control reaches end of non-void function [-Werror=return-
       | ^
 cc1: all warnings being treated as errors
 fa29291
+Sun Sep 13 05:57:14 PM UTC 2026: 
+ hashmap.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘createMap’:
+hashmap.c:62:12: error: incompatible types when returning type ‘HashMap’ {aka ‘struct HashMap’} but ‘HashMap *’ {aka ‘struct HashMap *’} was expected
+   62 |     return mapa;
+      |            ^~~~
+hashmap.c:58:5: error: ignoring return value of ‘scanf’ declared with attribute ‘warn_unused_result’ [-Werror=unused-result]
+   58 |     scanf("%ld", &mapa.size);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+hashmap.c:59:5: error: ignoring return value of ‘scanf’ declared with attribute ‘warn_unused_result’ [-Werror=unused-result]
+   59 |     scanf("%ld", &mapa.capacity);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+hashmap.c:60:5: error: ignoring return value of ‘scanf’ declared with attribute ‘warn_unused_result’ [-Werror=unused-result]
+   60 |     scanf("%ld", &mapa.current);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+hashmap.c:63:1: error: control reaches end of non-void function [-Werror=return-type]
+   63 | }
+      | ^
+cc1: all warnings being treated as errors
+18ee293
