@@ -55,9 +55,9 @@ HashMap * createMap(long capacity)
 
     mapa->buckets = NULL;
 
-    scanf("%ld", &mapa->size);
-    scanf("%ld", &mapa->capacity);
-    scanf("%ld", &mapa->current);
+    mapa->size = 0;
+    mapa->capacity = 0;
+    mapa->current = -1;
 
     return mapa;
 }
